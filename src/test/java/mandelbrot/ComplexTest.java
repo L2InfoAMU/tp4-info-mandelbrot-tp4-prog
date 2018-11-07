@@ -71,6 +71,9 @@ public class ComplexTest {
 
     @Test
     void testReciprocal(){
+        Complex test = new Complex(1,0);
+        System.out.println("reel" + test.reciprocal().real + "imag " +test.reciprocal().imaginary);
+
         assertEquals(Complex.ONE, Complex.ONE.reciprocal());
         assertEquals(Complex.I, minusI.reciprocal());
         assertEquals(new Complex(0.5,0), two.reciprocal());
@@ -88,6 +91,7 @@ public class ComplexTest {
         assertEquals(oneMinusI, Complex.ONE.subtract(Complex.I));
         assertEquals(new Complex(real-1,imaginary-1),
                 new Complex(real, imaginary).subtract(onePlusI));
+
     }
 
     @Test
@@ -132,5 +136,10 @@ public class ComplexTest {
         Complex c1 = new Complex(real, imaginary);
         Complex c2 = new Complex(real, imaginary);
         assertEquals(c1.hashCode(), c2.hashCode());
+    }
+
+    @Test
+    void testEquals(){
+        assertEquals(Complex.ZERO.equals(Complex.ONE),false);
     }
 }
