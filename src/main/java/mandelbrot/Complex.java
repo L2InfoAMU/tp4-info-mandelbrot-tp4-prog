@@ -169,7 +169,7 @@ public class Complex {
         if (divisor.equals(ZERO)){
             throw new ArithmeticException("divide by zero");
         }
-        double m = squaredModulus();
+        double m = divisor.squaredModulus();
         return new Complex(
                 ((this.real * divisor.real) + (this.imaginary * divisor.imaginary)) / m,
                 ((this.imaginary * divisor.real) - (this.real * divisor.imaginary)) / m);
@@ -208,8 +208,8 @@ public class Complex {
         if (o == null || getClass() != o.getClass())
             return false;
         Complex complex = (Complex) o;
-        return Helpers.doubleCompare(complex.real, real) == 0 ||
-                Helpers.doubleCompare(complex.imaginary, imaginary) == 0;
+        return Helpers.doubleCompare(complex.real, real) == 1 &&
+                Helpers.doubleCompare(complex.imaginary, imaginary) == 1;
     }
 
     @Override

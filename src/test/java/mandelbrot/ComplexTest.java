@@ -71,9 +71,6 @@ public class ComplexTest {
 
     @Test
     void testReciprocal(){
-        Complex test = new Complex(1,0);
-        System.out.println("reel" + test.reciprocal().real + "imag " +test.reciprocal().imaginary);
-
         assertEquals(Complex.ONE, Complex.ONE.reciprocal());
         assertEquals(Complex.I, minusI.reciprocal());
         assertEquals(new Complex(0.5,0), two.reciprocal());
