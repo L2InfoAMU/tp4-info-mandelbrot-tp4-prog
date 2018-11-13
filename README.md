@@ -8,4 +8,4 @@ Le but du TP sera de corriger le code de la classe `Complex` en s'aidant de test
 ## Membres du projet
 
 - ELAMINE Raïd GR3
-- MONTAGNER Guillaume GR3
+- MONTAGNER Guillaume GR3.
