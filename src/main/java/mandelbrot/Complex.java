@@ -208,8 +208,8 @@ public class Complex {
         if (o == null || getClass() != o.getClass())
             return false;
         Complex complex = (Complex) o;
-        return Helpers.doubleCompare(complex.real, real) == 1 &&
-                Helpers.doubleCompare(complex.imaginary, imaginary) == 1;
+        return Helpers.doubleCompare(complex.real, real) == 0 &&
+                Helpers.doubleCompare(complex.imaginary, imaginary) == 0;
     }
 
     @Override

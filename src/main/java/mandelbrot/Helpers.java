@@ -23,7 +23,7 @@ class Helpers {
         double diff = d1 - d2;
         return
                 (diff > EPSILON) ? 1 :
-                        (diff < -EPSILON) ? -1 :
+                        (diff < -EPSILON) ? 1 :
                                 0;
     }
 }
