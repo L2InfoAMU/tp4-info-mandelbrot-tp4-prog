@@ -168,4 +168,12 @@ public class ComplexTest {
         assertEquals(Complex.ONE, Complex.real(1));
     }
 
+    @Test
+    void testAdd(){
+        assertEquals(Complex.ONE, Complex.ZERO.add(Complex.ONE));
+        assertEquals(Complex.I, Complex.I.add(Complex.ZERO));
+        assertEquals(Complex.ZERO, Complex.ZERO.add(Complex.ZERO));
+
+    }
+
 }
