@@ -183,9 +183,15 @@ public class Complex {
      * @return the complex number <code>this ** p</code>
      */
     Complex pow(int p) {
+        if (p < 0){
+            throw new ArithmeticException("power of negative");
+        }
+        Complex result = this;
         if (p == 0)
-            return ZERO;
-        Complex result = (this.multiply(this)).pow(p / 2);
+            return ONE;
+        if (p == 1)
+            return result;
+        result = (this.multiply(this)).pow(p / 2);
         if (p % 2 == 1)
             result = result.multiply(this);
         return result;

@@ -169,11 +169,22 @@ public class ComplexTest {
     }
 
     @Test
-    void testAdd(){
+    void testAdd() {
         assertEquals(Complex.ONE, Complex.ZERO.add(Complex.ONE));
         assertEquals(Complex.I, Complex.I.add(Complex.ZERO));
         assertEquals(Complex.ZERO, Complex.ZERO.add(Complex.ZERO));
-
     }
 
+    @Test
+    void testPow(){
+        assertEquals(oneMinusI.multiply(oneMinusI), oneMinusI.pow(2));
+        assertEquals(oneMinusI.pow(150).multiply(oneMinusI), oneMinusI.pow(151));
+        assertEquals(oneMinusI.pow(0), Complex.ONE);
+        assertEquals(oneMinusI.pow(1), oneMinusI);
+    }
+
+    @Test
+    void testPowByNegative(){
+        assertThrows(ArithmeticException.class, ()->Complex.ONE.pow(-1));
+    }
 }
